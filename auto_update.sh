@@ -3,7 +3,8 @@
 # GitHub Auto-Commit Bot
 # This script updates multiple files and pushes to GitHub
 
-REPO_DIR="$HOME/github-auto-commit-bot"
+# Get the directory where this script is located
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$REPO_DIR" || exit 1
 
 # Current timestamp
