@@ -330,7 +330,7 @@ MAX_RETRIES=3
 RETRY_COUNT=0
 
 while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-    if git push origin main 2>/dev/null || git push origin master 2>/dev/null; then
+    if git push origin main || git push origin master; then
         echo "✅ Successfully pushed to GitHub at $TIMESTAMP"
         echo "$TIMESTAMP - Success: $RANDOM_MESSAGE" >> "$REPO_DIR/push_log.txt"
         exit 0
